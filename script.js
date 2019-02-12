@@ -1,14 +1,8 @@
-
-
 let slidesItem = document.querySelectorAll('.slide-item');
-
 let indContainer = document.querySelector('.indicators');
-
-
 let btnPausePlay = document.querySelector('#pause-play');
 let btnPrev = document.querySelector('#prev');
 let btnNext = document.querySelector('#next');
-
 let currentSlide = 0;
 let playStatus = true;
 let timerId = null;
@@ -19,6 +13,9 @@ const FA_PLAY = '<i class="fas fa-play"></i>';
 const SPACE = ' ';
 const LEFT_ARROW = 'ArrowLeft';
 const RIGTH_ARROW = 'ArrowRight';
+
+indContainer.style.display = 'flex'; 
+document.querySelector('.controls').style.display = 'block';
 
 let goToSlide = (n) => {
 	slidesItem[currentSlide].classList.toggle('active');
